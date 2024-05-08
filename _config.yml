@@ -114,7 +114,7 @@ analytics:
 author:
   name             : "Patrik Eriksson"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I test am an **amazing** person."
   location         : "Somewhere"
   email            :
   links:
