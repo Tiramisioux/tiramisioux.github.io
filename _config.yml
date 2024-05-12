@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Site Title"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "site tagline that appears below site title in masthead"
 name                     : "Patrik"
 description              : "An amazing website."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -115,7 +115,7 @@ author:
   name             : "Patrik Eriksson"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I test am an **amazing** person."
-  location         : "Somewhere"
+  location         : "Göteborg, Sweden"
   email            :
   links:
     - label: "Email"
@@ -123,19 +123,22 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      #url: "https://www.patrikerikssonfilm.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+    - label: "Mastodon"
+      icon: "fab fa-fw fa-mastodon"
+      url: "https://mastodon.social/@tiramisioux"
+      rel: me
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/tiramisioux"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://instagram.com/patrikerikssonfilm"
 
 # Site Footer
 footer:
@@ -160,14 +163,14 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/patrikerikssonfilm"
 
 
 # Reading Files
 include:
   - .htaccess
   - _pages
-  - ["_pages"]
+
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -326,3 +329,10 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
