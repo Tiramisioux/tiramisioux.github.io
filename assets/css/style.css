@@ -1,0 +1,58 @@
+/* Plain HTML, the way pages looked before anyone styled them: a serif face,
+   black on white, blue links that turn purple once visited. The only real
+   concessions to this century are a reading width and a responsive viewport. */
+
+body {
+  font-family: Times, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
+  max-width: 40em;
+  margin: 2em auto;
+  padding: 0 1.2em;
+}
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #00e; }
+
+h1, h2, h3 { font-weight: bold; line-height: 1.25; }
+h1 { font-size: 1.6em; margin: 0; }
+h2 { font-size: 1.25em; margin: 1.8em 0 0.3em; }
+h3 { font-size: 1.05em; margin: 1.4em 0 0.2em; }
+
+h1 a, h1 a:visited { color: #000; text-decoration: none; }
+h1 a:hover { text-decoration: underline; }
+
+p { margin: 0.7em 0; }
+ul { margin: 0.5em 0; padding-left: 1.4em; }
+li { margin: 0.2em 0; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.2em 0;
+}
+
+header .tagline,
+footer {
+  font-size: 0.9em;
+  color: #555;
+}
+header .tagline { margin: 0.25em 0 0; }
+footer p { margin: 0; }
+
+/* Each project: a heading, a line of links, a paragraph. */
+.project { margin: 0 0 2em; }
+.project .links {
+  font-size: 0.9em;
+  margin: 0.1em 0 0.5em;
+}
+
+code {
+  font-family: Courier, "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+img { max-width: 100%; height: auto; }
