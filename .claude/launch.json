@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "site",
-      "runtimeExecutable": "scripts/serve.sh",
-      "runtimeArgs": [],
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["scripts/serve.sh"],
       "port": 4000
     }
   ]
