@@ -2,8 +2,9 @@
 layout: default
 ---
 
-I make films, and I build open-source tools for the things I need while making
-them. Two of those are below — both are free to use, fork and take apart.
+I'm Patrik Eriksson. I make films, and I build open-source tools for the things
+I need while making them. Two of those are below — both are free to use, fork
+and take apart.
 
 ## CineMate
 
