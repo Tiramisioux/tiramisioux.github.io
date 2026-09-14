@@ -2,9 +2,8 @@
 layout: default
 ---
 
-I'm Patrik Eriksson, in Göteborg, Sweden. I make films, and I build open-source
-tools for the things I need while making them. Two of those are below — both are
-free to use, fork and take apart.
+I make films, and I build open-source tools for the things I need while making
+them. Two of those are below — both are free to use, fork and take apart.
 
 ## CineMate
 
