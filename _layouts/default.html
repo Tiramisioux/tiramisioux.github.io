@@ -8,11 +8,18 @@
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-
+{% comment %} Every page with a title joins the nav row; index.md has none, so on a
+one-page site this emits nothing at all and the front page's HTML is unchanged.
+{% endcomment %}{% assign nav_pages = site.pages | where_exp: "p", "p.title" | sort: "title" %}
 <header>
   <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
   <p class="tagline">{{ site.description }}{% if site.author.location %} &middot; {{ site.author.location }}{% endif %}</p>
 </header>
+{%- if nav_pages.size > 0 %}
+<nav>
+<a href="{{ '/' | relative_url }}">Home</a>{% for p in nav_pages %} &middot; <a href="{{ p.url | relative_url }}">{{ p.title }}</a>{% endfor %}
+</nav>
+{%- endif %}
 
 <hr>
 

@@ -43,6 +43,12 @@ footer {
 header .tagline { margin: 0.25em 0 0; }
 footer p { margin: 0; }
 
+/* Nav row — only rendered once there is a second page. */
+nav { font-size: 0.9em; margin: 0.6em 0 0; }
+
+/* The date under a post's title. */
+.postdate { font-size: 0.9em; color: #555; margin: 0.2em 0 1.2em; }
+
 /* Each project: a heading, a line of links, a paragraph. */
 .project { margin: 0 0 2em; }
 .project .links {

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{%- comment -%}
+A dated entry. Anything in _posts/ gets this layout automatically — see the
+`defaults` block in _config.yml. The <h2> comes from default.html; this layout
+only adds the date under it.
+{%- endcomment -%}
+<p class="postdate">{{ page.date | date: "%-d %B %Y" }}</p>
+
+{{ content }}

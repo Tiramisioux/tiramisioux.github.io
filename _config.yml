@@ -21,6 +21,18 @@ links:
   - label: "Instagram"
     url: "https://instagram.com/patrikerikssonfilm"
 
+# A new file needs nothing but a title in its front matter: the layout and the
+# URL both come from here.
+#   about.md                        ->  /about/
+#   _posts/2026-09-15-a-thing.md    ->  /2026/09/15/a-thing/
+permalink: pretty
+
+defaults:
+  - scope: {path: ""}
+    values: {layout: default}
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+
 markdown: kramdown
 kramdown:
   input: GFM

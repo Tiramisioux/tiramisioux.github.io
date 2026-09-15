@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 I'm Patrik Eriksson. I make films, and I build open-source tools for the things

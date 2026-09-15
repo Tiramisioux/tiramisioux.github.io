@@ -1,16 +1,50 @@
 # tiramisioux.github.io
 
-Personal landing page at <https://tiramisioux.github.io>. Plain Jekyll: one
-markdown page, one layout, one stylesheet, no theme gem and no plugins — so the
-HTML GitHub Pages serves is the HTML you get locally.
+Personal landing page at <https://tiramisioux.github.io>. Plain Jekyll, no theme
+gem and no plugins — so the HTML GitHub Pages serves is the HTML you get
+locally. Content is ordinary markdown files: drop one in, it becomes a page.
 
 ```
 _config.yml              site title, tagline, footer links
-index.md                 the page — intro text and the two projects
-_layouts/default.html    the whole template
+index.md                 the front page — intro text and the two projects
+_posts/                  dated entries, one markdown file each
+_layouts/default.html    the template
+_layouts/post.html       adds the date under a post's title
 assets/css/style.css     the whole stylesheet
 scripts/serve.sh         local preview
 ```
+
+## Adding a page
+
+Drop a markdown file in the root. Front matter needs nothing but a title:
+
+```markdown
+---
+title: About
+---
+
+Ordinary markdown from here down.
+```
+
+`about.md` is served at `/about/`, and every page with a title joins the nav row
+under the header. The nav is hidden entirely while `index.md` is the only page,
+which is why the front page looks the same as it did before any of this existed.
+
+## Adding a dated entry
+
+Same thing, in `_posts/`, with the date in the filename —
+`_posts/2026-09-15-a-thing.md` is served at `/2026/09/15/a-thing/` and gets its
+date printed under the title. Nothing links to entries yet; to list them, loop
+over `site.posts` on whichever page should carry the list:
+
+```liquid
+{% for post in site.posts %}
+- [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%-d %b %Y" }}
+{% endfor %}
+```
+
+The layout and the URL shape both come from `_config.yml`, so neither a page nor
+an entry has to name a layout.
 
 ## Branches
 
